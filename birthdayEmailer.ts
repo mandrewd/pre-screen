@@ -3,7 +3,7 @@ import {sendBirthdayEmail} from './lib'; // <-- Let's pretend this is already a 
 
 // EXPLINATION:
 // A Junior developer is asking for your help!
-// Read this file completely then identify what the junior developer is TRYING to do with his/her code and refactor it to make more sense.
+// Read this file completely then identify what the junior developer is trying to do and refactor it to make more sense.
 // Lets make-believe that the code in this file is all the code which you and your team are authorized to modify.
 // Leave comments explaining your reasoning, and why you chose to refactor things the way you did.
 

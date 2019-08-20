@@ -1,7 +1,7 @@
 // EXPLINATION:
 // A Junior developer is asking for your help!
 // Read this file completely then identify what the junior developer is trying to do and refactor it to make more sense.
-// Lets make-believe that the code in this file is all the code which you and your team are authorized to modify.
+// Feel free to add new files/folders if you wish, but lets try to keep it as small as possible.
 // Leave comments explaining your reasoning, and why you chose to refactor things the way you did.
 
 // INSTRUCTIONS:

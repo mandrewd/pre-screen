@@ -1,6 +1,3 @@
-import {createConnection} from 'redis'; // <-- Let's' pretend this is the standard NodeJS redis package.
-import {sendBirthdayEmail} from './lib'; // <-- Let's pretend this is already a thing that works.
-
 // EXPLINATION:
 // A Junior developer is asking for your help!
 // Read this file completely then identify what the junior developer is trying to do and refactor it to make more sense.
@@ -28,6 +25,9 @@ import {sendBirthdayEmail} from './lib'; // <-- Let's pretend this is already a 
 // Extra Credit:
 // - refactor this OOP approach to use the functional programming style.
 // - prove it works with TESTS!
+
+import {createConnection} from 'redis'; // <-- Let's' pretend this is the standard NodeJS redis package.
+import {sendBirthdayEmail} from './lib'; // <-- Let's pretend this is already a thing that works.
 
 class User {
   id: number;

@@ -1,3 +1,8 @@
+// NOTE TO THE READER:
+// The code below is written to be "typescript-esque" but you can consider this to be pseudo-code for this evaluation.
+// Your rewrite of this code can be in any language you like. Dont get hung-up on language specific problems or linting issues.
+// * We suggest either Python or Javascript, as that is what we use here at Dragonchain.
+
 // EXPLINATION:
 // A Junior developer is asking for your help!
 // Read this file completely then identify what the junior developer is trying to do and refactor it to make more sense.

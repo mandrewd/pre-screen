@@ -31,7 +31,7 @@
 // - refactor this OOP approach to use the functional programming style.
 // - prove it works with TESTS!
 
-import {createConnection} from 'redis'; // <-- Let's' pretend this is the standard NodeJS redis package.
+import {createClient} from 'redis'; // <-- Let's' pretend this is the standard NodeJS redis package.
 import {sendBirthdayEmail} from './lib'; // <-- Let's pretend this is already a thing that works.
 
 class User {
@@ -42,7 +42,7 @@ class User {
   public constructor(id?: number, birthday?: Date){
     this.id = id || this.redis.incr('age-app:user-ids');
     this.birthday = birthday;
-    this.redis = createConnection();
+    this.redis = createClient();
   }
 
   public static async find(id){
@@ -77,7 +77,7 @@ class User {
 
 // Main function (run once a day, every day)
 export const main = async () => {
-  const r = createConnection()
+  const r = createClient()
   const highestId = await r.get('age-app:user-ids')
   for(var i = 0; i <= highestId; i++) {
     const user = await User.find(i);

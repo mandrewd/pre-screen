@@ -66,7 +66,7 @@ class User {
   }
 
   public save(){
-    this.redis.hset('users', this.id, {birthday: this.birthday.toISOString()});
+    this.redis.hset('users', this.id, 'birthday', this.birthday.toISOString());
   }
 }
 

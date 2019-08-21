@@ -59,15 +59,19 @@ class User {
 
   public async celebrateBirthday() {
     const key = `sent-${this.id}`;
-    const oneYear = 60*60*24*365;
     const hasSent = await this.hasSentThisYear(key);
     if(!hasSent) await sendBirthdayEmail();
-    await this.redis.setex(key, oneYear)
+    await this.setSentStatus(key);
     this.save();
   }
 
-  public hasSentThisYear(key) {
+  public hasSentThisYear(key: string) {
     return this.redis.get(key) ? true : false;
+  }
+  
+  public setSentStatus(key: string) {
+    const oneYear = 60*60*24*365;
+    this.redis.setex(key, oneYear); // set to expire in one year, we check later. 
   }
 
   public save(){
